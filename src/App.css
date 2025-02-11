@@ -1,0 +1,154 @@
+/* Reset and basic styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  /* Animated gradient background */
+  background: linear-gradient(-45deg, #18453B, #145A32, #2E8B57, #20B2AA);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Social Media Links */
+.social-links {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  z-index: 1000;
+}
+
+/* Keyframes for animated gradient background */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Additional styling for collapsible sections */
+.section {
+  margin: 2rem auto;            /* vertical spacing */
+  padding: 1.5rem;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Optional: Style the inner content */
+.section > div {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+/* Carousel styling */
+.carousel {
+  position: relative;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.carousel-content {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem 4rem; /* Increased horizontal padding */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(24, 69, 59, 0.7);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+  background: rgba(24, 69, 59, 0.9);
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+/* Project preview styling */
+.project-preview {
+  margin-top: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-preview iframe {
+  width: 100%;
+  height: 500px; /* Increased height for a larger preview */
+  border: none;
+}
