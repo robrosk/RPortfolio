@@ -1,10 +1,44 @@
 import './App.css';
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <div className="App">
+      <header
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+          padding: '10px',
+          backgroundColor: '#f1f1f1'
+        }}
+      >
+        <a
+          href="https://github.com/robrosk"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginRight: '10px' }}
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733609.png"
+            alt="GitHub"
+            style={{ width: '30px', height: '30px' }}
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/robroskowski/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginRight: '10px' }}
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn"
+            style={{ width: '30px', height: '30px' }}
+          />
+        </a>
+      </header>
       <Header />
       <EducationSection />
       <WorkExperienceSection />
@@ -36,7 +70,8 @@ const CollapsibleSection = ({ title, children }) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+
           >
             {children}
           </motion.div>
@@ -180,6 +215,8 @@ const ProjectCarousel = () => {
     }
   ];
 
+  const [containerHeight, setContainerHeight] = useState(400);
+  const slideRef = useRef(null);
   // State with [currentPage, direction]
   const [[page, direction], setPage] = useState([0, 0]);
   const project = projects[page];
@@ -206,12 +243,18 @@ const ProjectCarousel = () => {
     })
   };
 
+  useEffect(() => {
+    if (slideRef.current) {
+      setContainerHeight(slideRef.current.offsetHeight);
+    }
+  }, [page]);
+
   return (
     <div className="carousel">
       <button className="carousel-button left" onClick={() => paginate(-1)}>
         ‹
       </button>
-      <div className="carousel-content">
+      <div style={{ position: 'relative', overflow: 'hidden', height: containerHeight, margin: '0 30px' }}>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={page}
@@ -220,7 +263,9 @@ const ProjectCarousel = () => {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.5 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+            ref={slideRef}
+            style={{ position: 'absolute', width: 'calc(100% - 100px)', left: '50px', boxSizing: 'border-box' }}
           >
             <h3>{project.title}</h3>
             <p className="project-subtitle">{project.subtitle}</p>
