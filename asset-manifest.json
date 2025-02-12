@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/RPortfolio/static/css/main.2e053f9e.css",
-    "main.js": "/RPortfolio/static/js/main.07f8b7d3.js",
+    "main.js": "/RPortfolio/static/js/main.5101188f.js",
     "static/js/488.2d3131de.chunk.js": "/RPortfolio/static/js/488.2d3131de.chunk.js",
     "index.html": "/RPortfolio/index.html",
     "main.2e053f9e.css.map": "/RPortfolio/static/css/main.2e053f9e.css.map",
-    "main.07f8b7d3.js.map": "/RPortfolio/static/js/main.07f8b7d3.js.map",
+    "main.5101188f.js.map": "/RPortfolio/static/js/main.5101188f.js.map",
     "488.2d3131de.chunk.js.map": "/RPortfolio/static/js/488.2d3131de.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e053f9e.css",
-    "static/js/main.07f8b7d3.js"
+    "static/js/main.5101188f.js"
   ]
 }
