@@ -147,9 +147,9 @@ const ProjectCarousel = () => {
       subtitle: "Winner, Best Developer Tool @ Mhacks 2024",
       bullets: [
         "Engineered the framework from scratch using Python and GPT-4o-mini, including developing a custom sandbox environment with Python's subprocess library to securely execute and unit test code.",
-        "Implemented dynamic task creation and completion by leveraging Large Language Models (LLMs) as role-specific reviewers, enabling iterative validation and high-quality outcomes through specialized AI roles.",
-        "Designed a hierarchical multi-agent architecture where specialized agents decompose complex problems into manageable subtasks, utilizing weaker AI agents in coordinated efforts to enhance overall result quality and efficiency.",
-        "Achieved a 70% reduction in production costs and a 50% acceleration in development time, earning the Best Developer Tool award at Mhacks 2024 by demonstrating exceptional collaborative AI functionalities within a 24-hour hackathon."
+        "Designed a hierarchical multi‑agent architecture that decomposes complex problems into focused subtasks, orchestrating “weaker” AI roles in coordinated collaboration.",
+        "Built an LLM‑driven judge & retry mechanism, boosting GPT‑4o‑mini’s successful completion rate on initially failed subtasks from ~60% to ~95% through automated evaluation and iterative re‑assignment.",
+        "Delivered a 70% cost reduction and 50% faster development, earning “Best Developer Tool” at MHacks 2024 for demonstrating robust, iterative AI collaboration under a 24‑hour deadline."
       ]
     },
     {
