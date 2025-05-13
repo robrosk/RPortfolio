@@ -187,7 +187,7 @@ const ProjectCarousel = () => {
     {
       title: "PathFinder - Visualizing Pathfinding Algorithms",
       subtitle: "",
-      bullets: ["Built a website using HTML, CSS, and JavaScript to demonstrate and solve shortest path problems.",
+      bullets: ["Built a website using HTML, CSS, and JavaScript to demonstrate and solve path finding problems.",
         "Integrated BFS, DFS, A* Search, and Dijkstra's Algorithm for pathfinding solutions.",
         "Designed an interactive grid system where users can place start/end points, add walls, and visualize pathfinding in real-time.",
         "Implemented a DFS-based random maze generator to create dynamic and engaging test cases for algorithms."
