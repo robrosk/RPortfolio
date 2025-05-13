@@ -87,9 +87,9 @@ const EducationSection = () => (
     <div>
       <h3>Bachelor of Science in Computer Science</h3>
       <p>Concentration: Artificial Intelligence</p>
-      <p>GPA: 3.975 / 4.0</p>
+      <p>GPA: 3.979 / 4.0</p>
       <p>Michigan State University, May 2026</p>
-      <p>Relevant Coursework: Data Structures & Algorithms, Computer Organization & Architecture, Computer Systems, Software Design & Development, Discrete Mathematics, Linear Algebra, Calculus III, Physics II </p>
+      <p>Relevant Coursework: Data Structures & Algorithms, Computer Organization & Architecture, Computer Systems, Software Design, Discrete Mathematics, Linear Algebra, Calculus III, Physics II </p>
     </div>
     <div>
       <h3>Machine Learning Specialization</h3>
@@ -103,8 +103,20 @@ const EducationSection = () => (
 const WorkExperienceSection = () => (
   <CollapsibleSection title="Work Experience">
     <div>
-      <h3>Incoming Microsoft Software Engineer Intern</h3>
-      <p>Summer 2025</p>
+      <h3>Software Engineer Intern at Microsoft</h3>
+      <p>May 2025 - Present</p>
+    </div>
+    <div>
+      <h3>Undergraduate Learning Assistant at Michigan State University - Computer Organization & Architecture</h3>
+      <p>January 2025 - May 2025</p>
+      <ul>
+        <li>
+          Led office hours, using intuitive examples to help 150+ students master ARM64 assembly, sequential circuits, and full CPU design from logic gates 
+        </li>
+        <li>
+          Collaborated with course instructors to identify and address common student misconceptions in hardware design and assembly programming
+        </li>
+      </ul>
     </div>
     <div>
       <h3>Software Engineer Intern at BorgWarner</h3>
