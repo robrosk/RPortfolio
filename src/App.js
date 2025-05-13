@@ -107,7 +107,7 @@ const WorkExperienceSection = () => (
       <p>May 2025 - Present</p>
     </div>
     <div>
-      <h3>Undergraduate Learning Assistant at Michigan State University - Computer Organization & Architecture</h3>
+      <h3>Undergraduate Learning Assistant at Michigan State University - CSE 320: Computer Organization & Architecture</h3>
       <p>January 2025 - May 2025</p>
       <ul>
         <li>
