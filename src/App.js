@@ -86,7 +86,7 @@ const EducationSection = () => (
   <CollapsibleSection title="Education">
     <div>
       <h3>Bachelor of Science in Computer Science</h3>
-      <p>Concentration: Artificial Intelligence</p>
+      <p>Concentration in Artificial Intelligence</p>
       <p>GPA: 3.979 / 4.0</p>
       <p>Michigan State University, May 2026</p>
       <p>Relevant Coursework: Data Structures & Algorithms, Computer Organization & Architecture, Computer Systems, Software Design, Discrete Mathematics, Linear Algebra, Calculus III, Physics II </p>
