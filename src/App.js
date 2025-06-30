@@ -194,7 +194,6 @@ const ProjectCarousel = () => {
         "Implemented a DFS-based random maze generator to create dynamic and engaging test cases for algorithms."
       ],
       previewLink: "https://robrosk.github.io/PathFinder/"
-      previewLink: "https://robrosk.github.io/PathFinder/"
     },
     {
       title: "Research Paper to Audiobook Converter using LLM's: Full Stack Application",
