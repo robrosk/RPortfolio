@@ -90,7 +90,7 @@ const EducationSection = () => (
       <p>Concentration: Artificial Intelligence</p>
       <p>GPA: 3.98 / 4.0</p>
       <p>Michigan State University, May 2026</p>
-      <p>Relevant Coursework: Data Structures & Algorithms, Computer Organization & Architecture, Computer Systems, Software Design & Development, Discrete Mathematics, Linear Algebra, Calculus III, Physics II </p>
+      <p>Relevant Coursework: Data Structures & Algorithms, Computer Organization & Architecture, Computer Systems, Software Design, Discrete Mathematics, Linear Algebra, Calculus III, Physics II </p>
     </div>
     <div>
       <h3>Machine Learning Specialization</h3>
@@ -186,13 +186,14 @@ const ProjectCarousel = () => {
       ]
     },
     {
-      title: "Shortest Path Visualization",
+      title: "PathFinder - Visualizing Pathfinding Algorithms",
       subtitle: "",
-      bullets: ["Built a website using HTML, CSS, and JavaScript to demonstrate and solve shortest path problems.",
+      bullets: ["Built a website using HTML, CSS, and JavaScript to demonstrate and solve path finding problems.",
         "Integrated BFS, DFS, A* Search, and Dijkstra's Algorithm for pathfinding solutions.",
         "Designed an interactive grid system where users can place start/end points, add walls, and visualize pathfinding in real-time.",
         "Implemented a DFS-based random maze generator to create dynamic and engaging test cases for algorithms."
       ],
+      previewLink: "https://robrosk.github.io/PathFinder/"
       previewLink: "https://robrosk.github.io/PathFinder/"
     },
     {
