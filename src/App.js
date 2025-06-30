@@ -43,6 +43,7 @@ function App() {
       <EducationSection />
       <WorkExperienceSection />
       <ProjectsSection />
+      <PapersSection />
     </div>
   );
 }
@@ -87,7 +88,7 @@ const EducationSection = () => (
     <div>
       <h3>Bachelor of Science in Computer Science</h3>
       <p>Concentration: Artificial Intelligence</p>
-      <p>GPA: 3.975 / 4.0</p>
+      <p>GPA: 3.98 / 4.0</p>
       <p>Michigan State University, May 2026</p>
       <p>Relevant Coursework: Data Structures & Algorithms, Computer Organization & Architecture, Computer Systems, Software Design & Development, Discrete Mathematics, Linear Algebra, Calculus III, Physics II </p>
     </div>
@@ -103,8 +104,8 @@ const EducationSection = () => (
 const WorkExperienceSection = () => (
   <CollapsibleSection title="Work Experience">
     <div>
-      <h3>Incoming Microsoft Software Engineer Intern</h3>
-      <p>Summer 2025</p>
+      <h3>Software Engineering Intern at Microsoft</h3>
+      <p>May 2025 - Present</p>
     </div>
     <div>
       <h3>Software Engineer Intern at BorgWarner</h3>
@@ -114,7 +115,7 @@ const WorkExperienceSection = () => (
           Solely architected and implemented a full‑stack synthetic vehicle data generator, utilizing HTML, CSS, JavaScript, Flask, Python, and SQL, while optimizing performance through Cython compilation to C; integrated with CANalyzer and CANoe for comprehensive automotive system analysis.
         </li>
         <li>
-          Engineered advanced data processing algorithms to enhance Google Maps API data, incorporating noise reduction, route segmentation, and curve smoothing techniques for improved simulation accuracy.
+          Engineered advanced data processing algorithms to enhance Google Maps API data, incorporating noise reduction, route segmentation, and curve smoothing techniques, resulting in a 60% increase in simulaton accuracy.
         </li>
         <li>
           Developed and trained a neural network for vehicle speed prediction and real-time calculation of critical metrics, integrating complex vehicle dynamics and customizable time intervals.
@@ -147,9 +148,9 @@ const ProjectCarousel = () => {
       subtitle: "Winner, Best Developer Tool @ Mhacks 2024",
       bullets: [
         "Engineered the framework from scratch using Python and GPT-4o-mini, including developing a custom sandbox environment with Python's subprocess library to securely execute and unit test code.",
-        "Designed a hierarchical multi‑agent architecture that decomposes complex problems into focused subtasks, orchestrating “weaker” AI roles in coordinated collaboration.",
-        "Built an LLM‑driven judge & retry mechanism, boosting GPT‑4o‑mini’s successful completion rate on initially failed subtasks from ~60% to ~95% through automated evaluation and iterative re‑assignment.",
-        "Delivered a 70% cost reduction and 50% faster development, earning “Best Developer Tool” at MHacks 2024 for demonstrating robust, iterative AI collaboration under a 24‑hour deadline."
+        "Designed a hierarchical multi‑agent architecture that decomposes complex problems into focused subtasks, orchestrating 'weaker' AI roles in coordinated collaboration.",
+        "Built an LLM‑driven judge & retry mechanism, boosting GPT‑4o‑mini's successful completion rate on initially failed subtasks from ~60% to ~95% through automated evaluation and iterative re‑assignment.",
+        "Delivered a 70% cost reduction and 50% faster development, earning 'Best Developer Tool' at MHacks 2024 for demonstrating robust, iterative AI collaboration under a 24‑hour deadline."
       ]
     },
     {
@@ -192,7 +193,7 @@ const ProjectCarousel = () => {
         "Designed an interactive grid system where users can place start/end points, add walls, and visualize pathfinding in real-time.",
         "Implemented a DFS-based random maze generator to create dynamic and engaging test cases for algorithms."
       ],
-      previewLink: "https://robrosk.github.io/ShortestPathVisualization/"
+      previewLink: "https://robrosk.github.io/PathFinder/"
     },
     {
       title: "Research Paper to Audiobook Converter using LLM's: Full Stack Application",
@@ -301,5 +302,39 @@ const ProjectsSection = () => (
     <ProjectCarousel />
   </CollapsibleSection>
 );
+
+// Papers Section using CollapsibleSection
+const PapersSection = () => {
+  const papers = [
+    {
+      title: "Improving Mathematics Performance in Algebra by Using A Videogame Style Points-Based Feedback System",
+      authors: "John Leddo, Varsha Mupparaju and Robert Roskowski",
+      publication: "International Journal of Social Science and Economic Research, 2024",
+      description: "Engineered and launched two dynamic algebra quiz platforms with HTML, CSS, and JavaScript, supporting research for an upcoming publication, earning authorship credit.",
+      link: "https://www.ijsser.org/2024files/ijsser_09__106.pdf" 
+    }
+  ];
+  // Add more papers here as needed
+
+  return (
+    <CollapsibleSection title="Papers">
+      <ul className="papers-list">
+        {papers.map((paper, idx) => (
+          <li key={idx} style={{ marginBottom: '1.5em' }}>
+            <h3 style={{ margin: 0 }}>{paper.title}</h3>
+            <p style={{ margin: 0, fontStyle: 'italic' }}>{paper.authors}</p>
+            <p style={{ margin: 0 }}>{paper.publication}</p>
+            <p style={{ margin: '0.5em 0' }}>{paper.description}</p>
+            {paper.link && paper.link !== "#" && (
+              <div style={{ textAlign: "center", marginTop: "0.5em" }}>
+                <a href={paper.link} target="_blank" rel="noopener noreferrer">View Paper</a>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </CollapsibleSection>
+  );
+};
 
 export default App;
