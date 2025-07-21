@@ -127,7 +127,7 @@ const WorkExperienceSection = () => (
         <li>Architected scaffolding-style agent workflow (C#/.NET + Azure AI): human feedback → prompt chaining → on-demand RAG → tool-enforced validation, achieving ≈99% edit reliability across 600+ troubleshooting guides.</li>
         <li>Built & productionized 5+ deterministic editing tools (regex-driven Markdown add/alter); function calls mandatory in early stages, auto invoked in the final stage.</li>
         <li>Implemented several guardrails—constraint-aware prompts and tool level checks (e.g., section-preview required before alteration), LLM as a Judge retry loop—that have blocked 100% of malformed outputs in 10,000 + agent calls.</li>
-        <li>Led model-upgrade experiments (GPT-4o → GPT-4.1 → o3-mini → o4-mini): -13% hallucination, +11% fidelity, 99.7% feedback-incorporation accuracy (n≈150, CI=98%); results drove the decision to standardize o4-mini.</li>
+        <li>Led model-upgrade experiments (GPT-4o → GPT-4.1 → o3-mini): -13% hallucination, +11% fidelity, 99.7% feedback-incorporation accuracy (n≈150, CI=98%); results drove the decision to standardize o3-mini.</li>
         <li>Presented findings to org leadership; accepted roadmap expected to reduce incident Time-To-Mitigation (TTM), accelerating resolution and cutting downtime-related losses.</li>
       </ul>
     </div>
