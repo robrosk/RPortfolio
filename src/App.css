@@ -152,3 +152,23 @@ body {
   height: 500px; /* Increased height for a larger preview */
   border: none;
 }
+
+/* Technical Skills custom list styling */
+.technical-skills-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5em 0 0 0;
+}
+.technical-skills-list li {
+  margin-bottom: 1em;
+  text-align: left;
+  font-size: 1.08em;
+  background: #f5f8f7;
+  border-radius: 6px;
+  padding: 0.7em 1em;
+  box-shadow: 0 1px 3px rgba(24, 69, 59, 0.07);
+  border-left: 4px solid #18453B;
+}
+.technical-skills-list b {
+  color: #18453B;
+}
