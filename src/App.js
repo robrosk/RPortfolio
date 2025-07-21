@@ -109,6 +109,7 @@ const TechnicalSkillsSection = () => (
         <li><b>Programming Languages:</b> Python, JavaScript, Java, C, C++, C#, MATLAB</li>
         <li><b>Cloud & Web:</b> Azure, .NET, HTML/CSS, Flask/FastAPI</li>
         <li><b>Machine Learning:</b> Neural Networks, Linear & Logistic Regression, Feature Engineering, Reinforcement Learning, PyTorch, TensorFlow, RAG, Scikit-learn, XGBoost, NLP/transformers basics</li>
+        <li><b>Agentic AI:</b> Context Engineering, Agentic Scaffolding (Retry Loops), Multi-Agent Systems, Prompt Chaining, LLM Tool Use, LLM as a Judge</li>
         <li><b>Software Development:</b> Object-Oriented Programming, API Design/Integration, Real-Time Data Processing, Concurrent & Asynchronous Processing, Memory Management, Socket Programming (TCP & UDP)</li>
         <li><b>Tools & Technologies:</b> Git, Docker, SQL/KQL, Regex, Rest APIs</li>
       </ul>
@@ -128,6 +129,13 @@ const WorkExperienceSection = () => (
         <li>Implemented several guardrails—constraint‑aware prompts and tool level checks (e.g., section-preview required before alteration), LLM as a Judge retry loop—that have blocked 100% of malformed outputs in 10,000 + agent calls.</li>
         <li>Led model‑upgrade experiments (GPT‑4o → GPT‑4‑1 → o3‑mini → o4‑mini): -13% hallucination, +11% fidelity, 99.7% feedback‑incorporation accuracy (n≈150, CI=98%); results drove the decision to standardize o4-mini.</li>
         <li>Presented findings to org leadership; accepted roadmap expected to reduce incident Time-To-Mitigation (TTM), accelerating resolution and cutting downtime-related losses.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Undergraduate Learning Assistant</h3>
+      <p>Michigan State University, MI, US (Part-Time) <br/> January 2025 – May 2025</p>
+      <ul>
+        <li>Led office hours, using intuitive examples to help 150+ students master ARM64 assembly, sequential circuits, and full CPU design from logic gates</li>
       </ul>
     </div>
     <div>
