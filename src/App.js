@@ -124,18 +124,11 @@ const WorkExperienceSection = () => (
       <h3>Software Engineering Intern at Microsoft</h3>
       <p>May 2025 - Present</p>
       <ul>
-        <li>Architected scaffolding‑style agent workflow (C#/.NET + Azure AI): human feedback → prompt chaining → on‑demand RAG → tool‑enforced validation, achieving ≈99% edit reliability across 600+ troubleshooting guides.</li>
-        <li>Built & productionized 5+ deterministic editing tools (regex‑driven Markdown add/alter); function calls mandatory in early stages, auto invoked in the final stage.</li>
-        <li>Implemented several guardrails—constraint‑aware prompts and tool level checks (e.g., section-preview required before alteration), LLM as a Judge retry loop—that have blocked 100% of malformed outputs in 10,000 + agent calls.</li>
-        <li>Led model‑upgrade experiments (GPT‑4o → GPT‑4‑1 → o3‑mini → o4‑mini): -13% hallucination, +11% fidelity, 99.7% feedback‑incorporation accuracy (n≈150, CI=98%); results drove the decision to standardize o4-mini.</li>
+        <li>Architected scaffolding-style agent workflow (C#/.NET + Azure AI): human feedback → prompt chaining → on-demand RAG → tool-enforced validation, achieving ≈99% edit reliability across 600+ troubleshooting guides.</li>
+        <li>Built & productionized 5+ deterministic editing tools (regex-driven Markdown add/alter); function calls mandatory in early stages, auto invoked in the final stage.</li>
+        <li>Implemented several guardrails—constraint-aware prompts and tool level checks (e.g., section-preview required before alteration), LLM as a Judge retry loop—that have blocked 100% of malformed outputs in 10,000 + agent calls.</li>
+        <li>Led model-upgrade experiments (GPT-4o → GPT-4.1 → o3-mini → o4-mini): -13% hallucination, +11% fidelity, 99.7% feedback-incorporation accuracy (n≈150, CI=98%); results drove the decision to standardize o4-mini.</li>
         <li>Presented findings to org leadership; accepted roadmap expected to reduce incident Time-To-Mitigation (TTM), accelerating resolution and cutting downtime-related losses.</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Undergraduate Learning Assistant</h3>
-      <p>Michigan State University, MI, US (Part-Time) <br/> January 2025 – May 2025</p>
-      <ul>
-        <li>Led office hours, using intuitive examples to help 150+ students master ARM64 assembly, sequential circuits, and full CPU design from logic gates</li>
       </ul>
     </div>
     <div>
@@ -143,6 +136,13 @@ const WorkExperienceSection = () => (
       <p>July 2025 - Present</p>
       <ul>
         <li>Improving reliability of AVs using Machine Learning + Evolutionary Computing methods.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Undergraduate Learning Assistant</h3>
+      <p>Michigan State University, MI, US (Part-Time) <br/> January 2025 - May 2025</p>
+      <ul>
+        <li>Led office hours, using intuitive examples to help 150+ students master ARM64 assembly, sequential circuits, and full CPU design from logic gates</li>
       </ul>
     </div>
     <div>
