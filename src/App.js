@@ -41,6 +41,7 @@ function App() {
       </header>
       <Header />
       <EducationSection />
+      <TechnicalSkillsSection />
       <WorkExperienceSection />
       <ProjectsSection />
       <PapersSection />
@@ -100,12 +101,34 @@ const EducationSection = () => (
   </CollapsibleSection>
 );
 
+// Technical Skills Section using CollapsibleSection
+const TechnicalSkillsSection = () => (
+  <CollapsibleSection title="Technical Skills">
+    <div>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1.5em' }}>
+        <li><b>Programming Languages:</b> Python, JavaScript, Java, C, C++, C#, MATLAB</li>
+        <li><b>Cloud & Web:</b> Azure, .NET, HTML/CSS, Flask/FastAPI</li>
+        <li><b>Machine Learning:</b> Neural Networks, Linear & Logistic Regression, Feature Engineering, Reinforcement Learning, PyTorch, TensorFlow, RAG, Scikit-learn, XGBoost, NLP/transformers basics</li>
+        <li><b>Software Development:</b> Object-Oriented Programming, API Design/Integration, Real-Time Data Processing, Concurrent & Asynchronous Processing, Memory Management, Socket Programming (TCP & UDP)</li>
+        <li><b>Tools & Technologies:</b> Git, Docker, SQL/KQL, Regex, Rest APIs</li>
+      </ul>
+    </div>
+  </CollapsibleSection>
+);
+
 // Work Experience Section using CollapsibleSection
 const WorkExperienceSection = () => (
   <CollapsibleSection title="Work Experience">
     <div>
       <h3>Software Engineering Intern at Microsoft</h3>
       <p>May 2025 - Present</p>
+      <ul>
+        <li>Architected scaffolding‑style agent workflow (C#/.NET + Azure AI): human feedback → prompt chaining → on‑demand RAG → tool‑enforced validation, achieving ≈99% edit reliability across 600+ troubleshooting guides.</li>
+        <li>Built & productionized 5+ deterministic editing tools (regex‑driven Markdown add/alter); function calls mandatory in early stages, auto invoked in the final stage.</li>
+        <li>Implemented several guardrails—constraint‑aware prompts and tool level checks (e.g., section-preview required before alteration), LLM as a Judge retry loop—that have blocked 100% of malformed outputs in 10,000 + agent calls.</li>
+        <li>Led model‑upgrade experiments (GPT‑4o → GPT‑4‑1 → o3‑mini → o4‑mini): -13% hallucination, +11% fidelity, 99.7% feedback‑incorporation accuracy (n≈150, CI=98%); results drove the decision to standardize o4-mini.</li>
+        <li>Presented findings to org leadership; accepted roadmap expected to reduce incident Time-To-Mitigation (TTM), accelerating resolution and cutting downtime-related losses.</li>
+      </ul>
     </div>
     <div>
       <h3>Software Engineer Intern at BorgWarner</h3>
