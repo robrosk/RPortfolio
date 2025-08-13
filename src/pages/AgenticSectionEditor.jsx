@@ -8,6 +8,9 @@ const AgenticSectionEditor = () => {
   const [metrics, setMetrics] = useState(null);
 
   useEffect(() => {
+    // Scroll to top when page loads
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     fetch(METRICS_DATA_PATH)
       .then(response => response.json())
       .then(data => {
@@ -241,7 +244,7 @@ const AgenticSectionEditor = () => {
 
 
         <details className="metrics-definitions">
-          <summary>📊 Understanding the Metrics</summary>
+          <summary>Understanding the Metrics</summary>
           <div className="definitions-content">
             <div className="definition-item">
               <strong>Non-Hallucination (NH):</strong> Measures the percentage of content that is supported by evidence
@@ -278,14 +281,13 @@ const AgenticSectionEditor = () => {
                 <li>Standard Operating Procedures (SOPs)</li>
                 <li>Runbooks and playbooks</li>
                 <li>Knowledge Base articles</li>
-                <li>Design documents</li>
-                <li>Change management guides</li>
               </ul>
             </div>
             <div className="app-category">
               <h4>Formats Supported</h4>
               <ul>
-                <li>Markdown and HTML</li>
+                <li>Markdown (.md)</li>
+                <li>HTML</li>
                 <li>YAML and JSON</li>
                 <li>Structured technical documentation</li>
                 <li>Any document with stable anchors</li>

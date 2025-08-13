@@ -176,9 +176,23 @@ const Navigation = () => (
 // CollapsibleSection Component for slide animations
 const CollapsibleSection = ({ title, children, className }) => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const handleToggle = () => {
+    const newState = !isOpen;
+    setIsOpen(newState);
+    
+    // Scroll to top of section when opening
+    if (newState) {
+      const section = document.querySelector(`.${className || 'section'}`);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+  
   return (
     <section className={`section ${className || ''}`}>
-      <h2 onClick={() => setIsOpen(prev => !prev)} style={{ cursor: "pointer" }}>
+      <h2 onClick={handleToggle} style={{ cursor: "pointer" }}>
         {title} {isOpen ? "▼" : "►"}
       </h2>
       <AnimatePresence>
@@ -282,7 +296,7 @@ const WorkExperienceSection = () => (
 
                   <li><strong>Research:</strong> authored and submitted an <em>internal Microsoft Research paper</em> on the architecture, methodology, and evaluation (exact figures withheld pending approval).</li>
 
-                  <li><strong>Generalizes to:</strong> <em>any anchored/structured technical document</em> with stable section/step/ID anchors — not just TSGs. Examples: SOPs, runbooks, KB articles, design docs, change playbooks; formats like Markdown/HTML and YAML/JSON. In practice, this covers <em>most technical documentation</em>.</li>
+                  <li><strong>Generalizes to:</strong> <em>any anchored/structured technical document</em> with stable section/step/ID anchors — not just TSGs. Examples: SOPs, runbooks, KB articles, design docs, change playbooks; formats like <strong>Markdown (.md)</strong>, HTML, YAML, and JSON. In practice, this covers <em>most technical documentation</em>.</li>
 
                   <p className="text-xs opacity-70">"Anchored/structured" = documents with stable anchors the editor can target (e.g., headings, step numbers, or explicit IDs).</p>
                 </ul>
@@ -502,6 +516,14 @@ const ProjectCarousel = () => {
       const newPage = (prevPage + newDirection + projects.length) % projects.length;
       return newPage;
     });
+    
+    // Scroll to top of carousel when changing projects
+    setTimeout(() => {
+      const carousel = document.querySelector('.carousel');
+      if (carousel) {
+        carousel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100); // Small delay to ensure state update completes
   };
 
   const variants = {

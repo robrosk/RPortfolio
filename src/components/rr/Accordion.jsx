@@ -36,7 +36,18 @@ const Accordion = ({ items }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleToggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const newIndex = openIndex === index ? null : index;
+    setOpenIndex(newIndex);
+    
+    // Scroll to top of accordion when opening
+    if (newIndex !== null) {
+      setTimeout(() => {
+        const accordion = document.querySelector('.accordion');
+        if (accordion) {
+          accordion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100); // Small delay to ensure state update completes
+    }
   };
 
   return (

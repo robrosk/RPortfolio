@@ -6,6 +6,8 @@ const Research = () => {
   const navigate = useNavigate();
 
   const handleAgenticSectionEditorClick = () => {
+    // Scroll to top before navigation
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate('/research/agentic-section-editor');
   };
 
