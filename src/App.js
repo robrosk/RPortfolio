@@ -381,6 +381,22 @@ const WorkExperienceSection = () => (
 const ProjectCarousel = () => {
   const projects = [
     {
+      title: "Proximal Policy Optimization (PPO) Implementation from Scratch",
+      subtitle: "Research-grade PPO implementation in PyTorch following OpenAI's specifications with CNN-based actor-critic architecture.",
+      /* === RR: BEGIN ppo-methods-impact === */
+      methods: [
+        "Implemented Proximal Policy Optimization (PPO) from scratch in PyTorch, following OpenAI's research specifications",
+        "Built a CNN-based actor-critic architecture with separate policy and value heads, adaptable to both discrete and continuous action spaces",
+        "Integrated Generalized Advantage Estimation (GAE) (λ=0.95) for variance reduction and more stable training dynamics",
+        "Designed clipped surrogate loss (ε=0.2) with entropy regularization (c₂=0.01) to balance exploration and stability",
+        "Created a modular training loop with flexible batch sizes, epochs, gradient clipping, Adam optimization, and replay management",
+        "Engineered a clean, maintainable codebase with separation of concerns between networks, policies, and environments"
+      ],
+      impact: "Provides a research-grade PPO implementation that closely follows the original algorithm, making it easy to adapt for academic or applied work. Establishes a scalable reinforcement learning framework capable of running millions of timesteps efficiently. Designed for cross-domain use, supporting both classic control tasks (e.g., CartPole, Acrobot) and image-based environments (Atari-style). Can be extended to multi-agent systems, robotics, or custom environments, serving as a foundation for future RL research and engineering projects. Demonstrates end-to-end ML engineering skills: translating an algorithmic paper into a working, production-ready implementation.",
+      /* === RR: END ppo-methods-impact === */
+      bullets: []
+    },
+    {
       title: "Ensemble — Multi-Agent Code Execution Framework (MHacks Winner)",
       subtitle: "Winner, Best Developer Tool @ Mhacks 2024",
       /* === RR: BEGIN ensemble-methods-impact === */
