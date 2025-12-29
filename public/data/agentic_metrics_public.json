@@ -1,0 +1,45 @@
+{
+  "status": "internal aggregate (sanitized)",
+  "date": "Aug 2025",
+  "n_total": ">100",
+  "segments": ["larger models", "smaller models"],
+
+  "task_success": {
+    "baseline": "mid-70s%",
+    "agent": ">90%",
+    "delta_pp": "~18pp",
+    "delta_magnitude": "largest"
+  },
+
+  "NH": {
+    "label": "Non-Hallucinated",
+    "weighted": "high-90s%",
+    "delta_magnitude": "largest",
+    "by_segment": {
+      "larger models": "mid/high-90s%",
+      "smaller models": "highest relative gains"
+    }
+  },
+
+  "CP": {
+    "label": "Content Preservation",
+    "weighted": "low-90s%",
+    "delta_magnitude": "clear",
+    "by_segment": {
+      "larger models": "low-90s%",
+      "smaller models": "notably higher"
+    }
+  },
+
+  "FI": {
+    "label": "Feedback Incorporation",
+    "weighted": "high-90s%",
+    "delta_magnitude": "modest",
+    "by_segment": {
+      "larger models": "near ceiling",
+      "smaller models": "small additional lift"
+    }
+  },
+
+  "pass_criteria": "Task success = PASS if CP ≥ 8/10, FI ≥ 8/10, and NH is low-risk."
+}
